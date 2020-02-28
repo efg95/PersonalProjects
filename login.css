@@ -1,0 +1,38 @@
+*{
+  text-align: center;
+  padding: 5px;
+}
+
+li{
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: 5%;
+}
+input{
+  background-color: #333;
+  border: none;
+  border-radius: 2px;
+  text-align: left;
+  color: white;
+
+}
+
+h1{
+  font-family: sans-serif;
+  color: #F07334
+
+}
+
+.container {
+  font-family: sans-serif;
+  border: 2px solid #F07334;
+  width: 24%;
+  text-align: center;
+  margin: auto;
+  border-radius: 12px;
+  background-color: white;
+  padding-bottom: 10px;
+  -webkit-box-shadow: 3px 0px 10px 0px black;
+  -moz-box-shadow: 3px 0px 10px 0px black;
+  box-shadow: 3px 0px 10px black;
+}

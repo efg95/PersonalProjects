@@ -19,7 +19,7 @@ function validate()
 	if (valid)
 	{
 		alert("Login was successful");
-		window.location = "www.google.ie";
+		window.location = "login.html"; //change this to redirect to diff page
 		return false;
 	}
 	var again = " tries";
