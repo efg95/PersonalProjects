@@ -1,0 +1,18 @@
+# General workflow for github
+
+//pulls from master branch to get the latest code 
+1. git pull origin master
+
+//creates your own branch
+2. git checkout -b new_branch
+
+//checks if you are in the right branch
+3. git branch
+
+//make changes to code and stage file 
+4. git add .
+
+//committing changes
+5. git commit -m "message"
+
+6. git push origin new_branch
