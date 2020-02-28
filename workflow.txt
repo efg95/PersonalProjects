@@ -16,3 +16,8 @@
 5. git commit -m "message"
 
 6. git push origin new_branch
+
+// switch back to master branch
+7. git checkout master
+
+8. git merge new_branch
