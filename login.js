@@ -2,8 +2,10 @@ var count= 2;
 
 function validate()
 {
-	var un = document.login.username.value;
-	var pw = document.login.password.value;
+	// takes in the form name "login" it then takes in the input name "Username"
+	// and "Password" values
+	var un = document.login.Username.value;
+	var pw = document.login.Password.value;
 	var valid = false;
 	var usernameArray = ["Vlad", "Bob"];
 	var passwordArray = ["12345", "54321"];
@@ -35,10 +37,10 @@ function validate()
 	else
 	{
 		alert("Incorrect password or username you are now blocked");
-		document.login.username.value = "You are now Blocked";
-		document.login.password.value = "Fool you can't see this";
-		document.login.username.disabled = true;
-		document.login.password.disabled = true;
+		document.login.Username.value = "You are now Blocked";
+		document.login.Password.value = "Fool you can't see this";
+		document.login.Username.disabled = true;
+		document.login.Password.disabled = true;
 		return false;
 	}
 }
