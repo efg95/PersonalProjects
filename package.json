@@ -1,0 +1,27 @@
+{
+  "name": "PersonalProjects",
+  "version": "1.0.0",
+  "description": "projects in javacscript, css, html, using a database",
+  "main": "login.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "http-server": "^0.12.1",
+    "mongodb": "^3.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efg95/PersonalProjects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/efg95/PersonalProjects/issues"
+  },
+  "homepage": "https://github.com/efg95/PersonalProjects#readme"
+}
