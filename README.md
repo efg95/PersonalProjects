@@ -19,4 +19,6 @@ test in your browser
 UserLocation.html (https://developers.google.com/maps/documentation/javascript/examples/map-geolocation)
 
 
-https://codeburst.io/hitchhikers-guide-to-back-end-development-with-examples-3f97c70e0073 (how to access MongoDB through REST API)
+https://codeburst.io/hitchhikers-guide-to-back-end-development-with-examples-3f97c70e0073 (how to access MongoDB through REST API (MONGOOSE))
+
+https://medium.com/@joelrodrigues/how-to-access-mongodb-from-node-js-e37c587f226a (or just plain vanilla mongodb)
