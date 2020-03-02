@@ -1,50 +1,35 @@
-var count= 2
-// var account = {}
-// var accounts = []
+var express = require("express");
+var app = express();
+var port = 3000;
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-function validate()
-{
-	// takes in the form name "login" it then takes in the input name "Username"
-	// and "Password" values
-	var un = document.login.Username.value
-	var pw = document.login.Password.value
-	var valid = false
-	var usernameArray = ["Vlad", "Bob"]
-	var passwordArray = ["12345", "54321"]
+var mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/node-demo");
 
-	for (var i = 0; i < usernameArray.length; i++)
- {
+var accountSchema = new mongoose.Schema({
+    username: String,
+    password: String
+});
+var User = mongoose.model("User", accountSchema);
 
-	if ((un == usernameArray[i]) && (pw == passwordArray[i]))
-	{
-		valid = true
-		break
-	}
-}
-	if (valid)
-	{
-		alert("Login was successful")
-		window.location = "userLocation.html" //change this to redirect to diff page
-		return false
-	}
-	var again = " tries"
-	if (count ==1)
-	{
-		again = " try"
-	}
-	if (count >= 1)
-	{
-		alert("Wrong password or username")
-		count--
-	}
-	else
-	{
-		alert("Incorrect password or username you are now blocked")
-		document.login.Username.value = "You are now Blocked"
-		document.login.Password.value = "Fool you can't see this"
-		document.login.Username.disabled = true
-		document.login.Password.disabled = true
-		return false
-	}
-}
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/login.html");
+});
+
+app.post("/addname", (req, res) => {
+    var myData = new User(req.body);
+    myData.save()
+        .then(item => {
+            res.send("Name saved to database");
+        })
+        .catch(err => {
+            res.status(400).send("Unable to save to database");
+        });
+});
+
+app.listen(port, () => {
+    console.log("Server listening on port " + port);
+});

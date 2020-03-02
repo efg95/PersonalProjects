@@ -2,34 +2,73 @@
 <html>
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
+	<!-- <link rel="stylesheet" type="text/css" href="login.css"> -->
+	<style>
+	*{
+	  text-align: center;
+	  padding: 5px;
+	}
+
+	li{
+	  list-style-type: none;
+	  text-align: center;
+	  padding-bottom: 5%;
+	}
+	input{
+	  background-color: #333;
+	  border: none;
+	  border-radius: 2px;
+	  text-align: left;
+	  color: white;
+
+	}
+
+	h1{
+	  font-family: sans-serif;
+	  color: #F07334
+
+	}
+
+	.container {
+	  font-family: sans-serif;
+	  border: 2px solid #F07334;
+	  width: 24%;
+	  text-align: center;
+	  margin: auto;
+	  border-radius: 12px;
+	  background-color: white;
+	  padding-bottom: 10px;
+	  -webkit-box-shadow: 3px 0px 10px 0px black;
+	  -moz-box-shadow: 3px 0px 10px 0px black;
+	  box-shadow: 3px 0px 10px black;
+	}
+	</style>
 </head>
 <body>
 
 <div class="container">
 <div class="header">
- <h1>Login To Facebook </h1>
+ <h1>Login or Signup </h1>
  </div>
 
- <form name="login" method="post">
+ <form name="home" method="POST">
 
  <ul>
 	<!-- name is the name of the value you pass to the JS script -->
- <li>Username: <input class="username" type="text" name="Username">
+ <li>Username: <input type="text" name="username" placeholder="Username" required>
  </li>
 <!-- name is the name of the value you pass to the JS script -->
- <li>Password: <input class="password" type="password" name="Password">
+ <li>Password: <input type="password" name="password" placeholder="Password" required>
  </li>
  </ul>
 <!-- value sets the name of the button -->
-<input type="button" class="submit" value="Log In" name="submit" onclick="validate()">
+<input type="submit" value="Sign Up" formaction="/addname">
 <!-- goes to signup.html page -->
-<input type="button" class="submit" value="Sign up" name="sign up" onclick="location.href='signup.html'" >
+<input type="submit" value="Log In" formaction="/finduser">
 </form>
 </div>
 
 
-<script type="text/javascript" src=login.js></script>
 
 </body>
 </html>
