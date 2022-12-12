@@ -4,7 +4,7 @@
   "description": "projects in javacscript, css, html, using a database",
   "main": "login.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.0",
     "http-server": "^0.12.1",
     "mongodb": "^3.5.4",
